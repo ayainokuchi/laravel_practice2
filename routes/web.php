@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prifix' => 'admin'], function(){
-    Route::get('news/create','Admin/Newscontroller@add');
+Route::group(['prefix' => 'admin'], function(){
+    Route::get('news/create','Admin/NewsController@add');
     // 課題４
     Route::get('profile/create','Admin/ProfileController@add');
     Route::get('profile/edit','Admin/ProfileController@edit');
@@ -24,5 +24,5 @@ Route::group(['prifix' => 'admin'], function(){
 );
 
 // 課題３
-Route::get('XXX','bbb\AAAController@add');
+// Route::get('XXX','bbb\AAAController@add');
 
