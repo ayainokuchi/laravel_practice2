@@ -24,6 +24,5 @@ Route::group(['prefix' => 'admin'], function(){
 );
 
 // 課題３
-// Route::get('XXX','bbb\AAAController@bbb');
-// 
+// Route::get('XXX','AAAController@bbb');
 
