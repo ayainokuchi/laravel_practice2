@@ -6,7 +6,9 @@
     <div class="container">
         <div class="row">
             <h2>ニュース一覧</h2>
+            
         </div>
+        <p>(今月のニュース)</p>
         <div class="row">
             <div class="col-md-4">
                 <a href = " {{ action('Admin\NewsController@add' )}}" role="button" class="btn btn-primary">新規作成</a>
