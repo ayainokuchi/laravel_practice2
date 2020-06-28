@@ -53,7 +53,20 @@ class ProfileController extends Controller{
         $profile_history->save();
        
         return redirect('admin/profile/edit?id='.$request->id);
-    } 
+    }
+    
+    public function index(Request $request)
+    {   $cond_title = $request->cond_title;
+       if ($cond_title != '') {
+        
+           $posts = Profile::where('title', $cond_title)->get();
+       } else {
+          
+           $posts = Profile::all();
+      }
+       return view('admin.profile.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+        
+     }
     
 
 }
